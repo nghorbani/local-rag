@@ -1,0 +1,37 @@
+[project]
+name = "local-rag"
+version = "0.1.0"
+description = "A standalone library + Flask app for running retrieval-augmented generation (RAG) over scanned image documents stored locally"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    # Runtime dependencies
+    "flask", # Web UI
+    "sqlalchemy", # Database ORM
+    "psycopg2-binary", # PostgreSQL driver
+    "pgvector", # Vector extension for PostgreSQL
+    "python-dotenv", # Environment variable loading
+    "pydantic", # Data validation
+    "requests", # HTTP client for API calls
+    "markdown", # Markdown processing
+    "numpy", # Numerical operations
+    "pytest>=8.4.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    # Development dependencies
+    "pytest",  # Testing
+    "pytest-cov",  # Test coverage
+    "ruff",  # Linting
+    "black",  # Code formatting
+    "mypy",  # Type checking
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
