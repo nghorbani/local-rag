@@ -18,7 +18,7 @@ def test_package_imports():
 def test_config_imports():
     """Test that the config module can be imported."""
     try:
-        from local_rag import config
+        from local_rag import config  # noqa: F401  (the import is the test)
         assert True  # If we get here, the import succeeded
     except ImportError:
         pytest.fail("Failed to import local_rag.config")

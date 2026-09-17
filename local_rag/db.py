@@ -6,7 +6,7 @@ as well as bootstrapping the database with the necessary tables and extensions.
 """
 
 import contextlib
-from typing import Any, Dict, Generator, Optional
+from typing import Generator, Optional
 
 from sqlalchemy import Column, ForeignKey, Integer, String, Text, create_engine
 from sqlalchemy.engine import Engine
